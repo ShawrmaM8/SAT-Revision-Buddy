@@ -20,16 +20,16 @@ hf_api_key = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 pinecone_api_key = st.secrets["PINECONE_API_KEY"]
 
 # Initialize Pinecone
+index_name = "sat-notes"
+
 pc = Pinecone(api_key=pinecone_api_key)
 if index_name not in pc.list_indexes().names():
     pc.create_index(
         name=index_name,
-        dimension=384,  # Dimension for all-MiniLM-L6-v2
+        dimension=384,
         metric="cosine",
         spec=ServerlessSpec(cloud="aws", region="us-west-2")
     )
-
-index_name = "sat-notes"
 
 # Initialize session state
 if 'vectorstore' not in st.session_state:
@@ -151,3 +151,4 @@ if st.session_state.vectorstore:
 else:
 
     st.info("Upload and process your SAT notes in the sidebar to start.")
+
