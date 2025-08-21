@@ -1,0 +1,8 @@
+streamlit
+langchain
+langchain-community
+langchain-huggingface
+pinecone-client
+pypdf
+docx2txt
+python-dotenv
