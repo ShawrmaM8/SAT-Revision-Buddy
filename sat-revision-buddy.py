@@ -1,5 +1,6 @@
 
-`#SAT revision buddy
+#SAT revision buddy
+
 import streamlit as st
 import os
 from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
@@ -148,4 +149,5 @@ if st.session_state.vectorstore:
         with st.chat_message(msg["role"]):
             st.write(msg["content"])
 else:
-    st.info("Upload and process your SAT notes in the sidebar to start.")`
+
+    st.info("Upload and process your SAT notes in the sidebar to start.")
