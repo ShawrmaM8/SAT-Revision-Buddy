@@ -1,5 +1,4 @@
-
-#SAT revision buddy
+# SAT Revision Buddy
 
 import streamlit as st
 import os
@@ -12,7 +11,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 # HuggingFace embeddings
 from langchain.embeddings import HuggingFaceEmbeddings
-from langchain_huggingface import HuggingFaceEndpoint  # if you are using the endpoint directly
+from langchain_huggingface import HuggingFaceEndpoint  # if using endpoint directly
 
 # Vector store
 from langchain.vectorstores import Pinecone
@@ -23,7 +22,7 @@ from langchain.chains import create_retrieval_chain, create_history_aware_retrie
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
 # Runnables & parsers
-from langchain.schema.runnables import RunnablePassthrough
+from langchain.runnables import RunnablePassthrough   # fixed import path
 from langchain.output_parsers import StrOutputParser
 
 # Memory
@@ -170,6 +169,7 @@ if st.session_state.vectorstore:
 else:
 
     st.info("Upload and process your SAT notes in the sidebar to start.")
+
 
 
 
