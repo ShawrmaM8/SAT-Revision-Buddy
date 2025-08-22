@@ -1,8 +1,9 @@
 streamlit
-langchain
+langchain>=1.0.0
 langchain-huggingface
 pinecone-client
 pypdf
 docx2txt
 sentence-transformers
+
 
