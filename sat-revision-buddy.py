@@ -3,17 +3,35 @@
 
 import streamlit as st
 import os
-from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEndpoint, HuggingFaceEmbeddings
-from langchain_community.vectorstores import Pinecone
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.runnables import RunnablePassthrough
-from langchain_core.output_parsers import StrOutputParser
-from langchain.memory import ConversationBufferMemory
-from langchain.chains import create_history_aware_retriever, create_retrieval_chain
+
+# Document loaders
+from langchain.document_loaders import PyPDFLoader, Docx2txtLoader
+
+# Text splitters
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+
+# HuggingFace embeddings
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEndpoint  # if you are using the endpoint directly
+
+# Vector store
+from langchain.vectorstores import Pinecone
+
+# Prompts and chains
+from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain.chains import create_retrieval_chain, create_history_aware_retriever
 from langchain.chains.combine_documents import create_stuff_documents_chain
-from pinecone import Pinecone, ServerlessSpec
+
+# Runnables & parsers
+from langchain.schema.runnables import RunnablePassthrough
+from langchain.output_parsers import StrOutputParser
+
+# Memory
+from langchain.memory import ConversationBufferMemory
+
+# Pinecone client
+from pinecone import Pinecone as PineconeClient, ServerlessSpec
+
 
 # Load API keys from Streamlit secrets
 hf_api_key = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
@@ -152,5 +170,6 @@ if st.session_state.vectorstore:
 else:
 
     st.info("Upload and process your SAT notes in the sidebar to start.")
+
 
 
