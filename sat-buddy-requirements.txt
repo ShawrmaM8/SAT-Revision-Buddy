@@ -1,9 +1,8 @@
 streamlit
-langchain-core
-langchain-text-splitters
-langchain-community
+langchain
 langchain-huggingface
-pinecone
+pinecone-client
 pypdf
 docx2txt
 sentence-transformers
+
