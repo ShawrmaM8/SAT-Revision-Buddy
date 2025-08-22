@@ -28,8 +28,9 @@ if index_name not in pc.list_indexes().names():
         name=index_name,
         dimension=384,
         metric="cosine",
-        spec=ServerlessSpec(cloud="aws", region="us-west-2")
+        spec=ServerlessSpec(cloud="aws", region="us-east-1")  # changed to us-east-1
     )
+
 
 # Initialize session state
 if 'vectorstore' not in st.session_state:
@@ -151,4 +152,5 @@ if st.session_state.vectorstore:
 else:
 
     st.info("Upload and process your SAT notes in the sidebar to start.")
+
 
