@@ -1,11 +1,7 @@
-
 streamlit==1.26.0
 langchain==0.1.208
 langchain-huggingface==0.0.11
-pinecone-client==2.2.2
+pinecone==2.2.2
 pypdf==3.14.0
 docx2txt==0.8
 sentence-transformers==2.2.2
-
-
-
