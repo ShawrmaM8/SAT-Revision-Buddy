@@ -4,29 +4,29 @@ import streamlit as st
 import os
 
 # Document loaders
-from langchain.document_loaders import PyPDFLoader, Docx2txtLoader
+from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
 
 # Text splitters
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 # HuggingFace embeddings
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_huggingface import HuggingFaceEndpoint  # if using endpoint directly
 
 # Vector store
-from langchain.vectorstores import Pinecone
+from langchain_community.vectorstores import Pinecone
 
 # Prompts and chains
-from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import create_retrieval_chain, create_history_aware_retriever
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
 # Runnables & parsers
-from langchain.runnables import RunnablePassthrough   # fixed import path
-from langchain.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnablePassthrough
+from langchain_core.output_parsers import StrOutputParser
 
 # Memory
-from langchain.memory import ConversationBufferMemory
+from langchain_community.memory import ConversationBufferMemory
 
 # Pinecone client
 from pinecone import Pinecone as PineconeClient, ServerlessSpec
@@ -169,6 +169,7 @@ if st.session_state.vectorstore:
 else:
 
     st.info("Upload and process your SAT notes in the sidebar to start.")
+
 
 
 
