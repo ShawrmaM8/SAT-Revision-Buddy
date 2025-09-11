@@ -2,11 +2,11 @@ SAT Revision Buddy
 A free, browser-based app for SAT preparation. Upload your notes (PDF/Word), and the AI answers questions, summarizes content, or generates SAT-style quizzes. Built with Streamlit, Hugging Face, and Pinecone.
 How to Use
 
-Visit [your-app-URL] (e.g., https://sat-revision-buddy.streamlit.app).
-Upload a PDF/Word file (e.g., SAT math notes, vocab lists).
-Click “Process Notes” (~1-2 min).
-Ask questions (e.g., “What’s the Pythagorean theorem?”), request summaries, or type “quiz me” for SAT-style quizzes.
-Tips: Use clear notes (<10MB). Re-upload if session resets.
+1) Visit https://sat-revision-buddy.streamlit.app
+2) Upload a PDF/Word file (e.g., SAT math notes, vocab lists).
+3) Click “Process Notes” (~1-2 min).
+4) Ask questions (e.g., “What’s the Pythagorean theorem?”), request summaries, or type “quiz me” for SAT-style quizzes.
+*Tips: Use clear notes (<10MB). Re-upload if session resets.*
 
 Limitations
 
