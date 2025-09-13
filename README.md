@@ -14,8 +14,8 @@ Supports ~50-100 pages of notes (Pinecone free tier).
 Internet required; queries may take 2-5s.
 Free API limits (~1000 queries/day).
 
-Troubleshooting
+Troubleshooting:
 
 Upload error? Check file format/size.
 Slow/no response? Wait for API quota reset.
-Contact: [your-email] or study group chat.
+
